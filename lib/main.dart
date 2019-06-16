@@ -63,7 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
               backgroundImage: NetworkImage(data[i]["picture"]["thumbnail"]),
             ),
             onTap: (){
-
+              Navigator.push(context, MaterialPageRoute(
+                builder: (BuildContext context) => ContactView(data[i])
+              ));
             },
           );
         },
